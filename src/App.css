@@ -2,3 +2,22 @@
   margin: 0px;
   padding: 0px;
 }
+
+header {
+  width: 100%;
+  height: 377px;
+  background-color: #18012C;
+  color: #62338B;
+  text-align: right;
+  font-family: helvetica;
+}
+
+header h1 {
+  font-size: 89px;
+}
+
+header p {
+  font-size: 55px;
+}
+
+/*https://coolors.co/5f4b66-a7adc6-8797af-18012c-56667a*/
