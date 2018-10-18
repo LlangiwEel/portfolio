@@ -12,12 +12,38 @@ header {
   font-family: helvetica;
 }
 
+@keyframes name-slide {
+  0% {margin-right: 600px; opacity: 0.0;}
+  30% {margin-right: 600px; opacity: 0.0;}
+  60% {margin-right: 400px; opacity: 0.0;}
+  100% {margin-right: 0px; opacity: 1.0;}
+}
+
+@keyframes title-slide {
+  0% {margin-right: 600px; opacity: 0.0;}
+  30% {margin-right: 600px; opacity: 0.0;}
+  60% {margin-right: 400px; opacity: 0.0;}
+  100% {margin-right: 0px; opacity: 1.0;}
+}
+
+@keyframes technology-fade {
+  0% {opacity: 0.0;}
+  30% {opacity: 0.0;}
+  60% {opacity: 0.0;}
+  100% {opacity: 1.0;}
+}
+
 header h1 {
   font-size: 89px;
+  position: relative;
+  animation-name: name-slide;
+  animation-duration: 2.5s;
 }
 
 header p {
   font-size: 55px;
+  animation-name: title-slide;
+  animation-duration: 3s;
 }
 
 header {
@@ -35,6 +61,14 @@ header table {
 
 header table td {
   margin: 0px 100px 0px 100px;
+  animation-name: technology-fade;
+  animation-duration: 4s;
+}
+
+
+header table td:hover {
+  color: grey;
+  cursor: pointer;
 }
 
 
