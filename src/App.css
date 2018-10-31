@@ -1,29 +1,66 @@
-* {
-  margin: 0px;
-  padding: 0px;
+.App {
+  display: grid;
+  background-color: #4d4d4e;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 30px 233px 55px 300px;
+}
+
+#burger {
+  width: 40px;
+  height: 35px;
+  margin: 20px;
+  padding: 4px;
+}
+
+#burger:hover {
+  cursor: pointer;
+  animation-name: burgerWobble;
+  animation-duration: 1s;
+}
+
+@keyframes burgerWobble {
+  0% { transform: translateX(0%); }
+15% { transform: translateX(-15%) rotate(-2deg); }
+30% { transform: translateX(10%) rotate(2deg); }
+45% { transform: translateX(-10%) rotate(-1deg); }
+60% { transform: translateX(5%) rotate(1deg); }
+75% { transform: translateX(-5%) rotate(-.5deg); }
+100% { transform: translateX(0%); }
+}
+
+.burgerStripe {
+  width: 30px;
+  height: 4px;
+  background-color: #aaaaaa;
+  margin: 5px;
 }
 
 header {
-  width: 100%;
-  height: 266px;
+  position: relative;
+  text-align: center;
+  grid-column-start: 2;
+  grid-row-start: 2;
   background-color: #4d4d4e;
   color: #aaaaaa;
-  text-align: right;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 1fr;
   font-family: helvetica;
+  overflow:visible;
 }
 
 @keyframes name-slide {
-  0% {margin-right: 600px; opacity: 0.0;}
-  30% {margin-right: 600px; opacity: 0.0;}
-  60% {margin-right: 400px; opacity: 0.0;}
-  100% {margin-right: 0px; opacity: 1.0;}
+  0% {top: -600px; opacity: 0.0;}
+  30% {top: -600px; opacity: 0.0;}
+  60% {top: -400px; opacity: 0.0;}
+  100% {top: 0px; opacity: 1.0;}
 }
 
 @keyframes title-slide {
-  0% {margin-right: 600px; opacity: 0.0;}
-  30% {margin-right: 600px; opacity: 0.0;}
-  60% {margin-right: 400px; opacity: 0.0;}
-  100% {margin-right: 0px; opacity: 1.0;}
+  0% {top: -600px; opacity: 0.0;}
+  30% {top: -600px; opacity: 0.0;}
+  60% {top: -400px; opacity: 0.0;}
+  100% {top: 0px; opacity: 1.0;}
 }
 
 @keyframes technology-fade {
@@ -33,44 +70,38 @@ header {
   100% {opacity: 1.0;}
 }
 
-header h1 {
+header .name {
+  position: absolute;
+  grid-column-start: 1;
+  margin: 0px;
   font-size: 89px;
-  position: relative;
   animation-name: name-slide;
   animation-duration: 2.5s;
 }
 
-header p {
+header .jobTitle {
+  position: absolute;
+  margin: 0px;
+  grid-row-start: 2;
   font-size: 55px;
   animation-name: title-slide;
+  grid-column-start: 1;
   animation-duration: 3s;
 }
 
-header {
-  position: relative;
+.navBar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  font-size: 34px;
+  margin: 0px;
+  color: #aaaaaa;
+  background-color: #4d4d4e;
 }
 
-header table {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  font-size: 21px;
-  justify-content: space-between;
+.navButton {
+  margin: inherit;
 }
-
-header table td {
-  margin: 0px 100px 0px 100px;
-  animation-name: technology-fade;
-  animation-duration: 4s;
-}
-
-
-header table td:hover {
-  color: grey;
-  cursor: pointer;
-}
-
 
 
 

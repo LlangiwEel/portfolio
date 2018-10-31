@@ -1,21 +1,27 @@
 import React, { Component } from 'react';
 import './App.css';
 
+
 class App extends Component {
   render() {
     return (
       <div className="App">
+      <div id="burgerHolder">
+        <div id="burger">
+          <div className="burgerStripe"/>
+          <div className="burgerStripe"/>
+          <div className="burgerStripe"/>
+        </div>
+      </div>
       <header>
-        <h1>Lee Wignall</h1>
-        <p>Front-end Web Developer</p>
-          <table>
-          <td>Javascript ES6</td>
-          <td>SCSS</td>
-          <td>HTML</td>
-          <td>React</td>
-          <td>Git</td>
-          </table>
+        <p className="name">Lee Wignall</p>
+        <p className="jobTitle">Front End Web Developer</p>
       </header>
+      <div className="navBar">
+        {/*<p className="navButton">Who</p>
+        <p className="navButton">What</p>
+        <p className="navButton">Where</p>*/}
+      </div>
       </div>
     );
   }
